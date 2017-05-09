@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans|Oswald|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif');
+
+@font-face
+{
+    font-family: 'Playlist-Script';
+    src: url('/fonts/playlist-Script.ttf.woff')
+}
+
+/*General Styles*/
+    *
+    {
+        margin: 0px;
+        padding: 0px;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    body 
+    {
+        width: 1000px;
+        margin: 10px auto;
+        background: #EEE;
+    }
+    
+    a
+    {
+        color: #559960;
+    }
+
+    section
+    {
+        background: white;
+        padding: 20px;
+        margin: 5px 0px 0px;
+        box-shadow: 1px 1px .5px lightgrey;
+    }
+    
+    .container
+    {
+        padding: 20px;
+    }
+    
+    h2, h3, h4
+    {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        /*font-size: 35px;*/
+    }
+    
+    h2
+    {
+        width: 100%;
+        padding: 30px 0px;
+        font-size: 30px;
+    }
+
+    .clearfloat::before,
+    .clearfloat::after
+    {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    
+/*header styles*/
+    #vl-topnote
+    {
+        overflow: hidden;
+        /*display: flex;*/
+        flex-flow: row nowrap;
+        /*align-items: center;*/
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    #vl-topnote h3.first
+    {
+        float: left;
+    }
+    
+    #vl-topnote h3.second
+    {
+        float: right;
+        display: inline-block;
+        height: 100%;
+        cursor: pointer;
+        font-family: 'Montserrat';
+    }
+    
+    .closed
+    {
+        height: 0px;
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        transition: all 100ms;
+    }
+    
+    header
+    {
+        /*border-bottom: 1px #2B325E solid;*/
+        /*background: #2B325E;*/
+        margin-top: 5px;
+    }
+    
+    .vl-h-container 
+    {
+        /*background: #2B325E;*/
+        background: url("/images/bluefruits.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        /*background-repeat: no-repeat;*/
+        color: white;
+        padding: 50px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 1px .5px lightgrey;
+    }
+    
+    .vl-nav-container
+    {
+        background: white;
+        margin: 5px 0px;
+        box-shadow: 1px 1px .5px lightgrey;
+    }
+    
+    header .vl-nav-container a 
+    {
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #2B325E;
+        background: white;
+        font-size: 30px;
+        font-family: 'Playlist-Script';
+        /*font-family: 'Raleway';*/
+    }
+    
+    header img 
+    {
+        height: 100%;
+    }
+
+/*Nav Pull Right and Left*/
+    .pullRightLeft a:before, 
+    .pullRightLeft a:after
+    {
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        top: 0px;
+        content: '';
+        opacity: 0.7;
+        background: white;
+        transition: all 0.3s;
+    }
+    
+    .pullRightLeft a:before
+    {
+        left: 0px;
+    } 
+    
+    .pullRightLeft a:after
+    {
+        right: 0px;
+    }
+    
+    .pullRightLeft a:hover:before, 
+    .pullRightLeft a:hover:after
+    {
+        width: 100%;
+        background: #2B325E;
+        opacity: 0.3;
+    }
+
+    .pullRightLeft a.active:before, 
+    .pullRightLeft a.active:after
+    {
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        top: 0px;
+        content: '';
+        background: #2B325E;
+        opacity: 0.7;
+        transition: all 0.3s;
+    }
+    
+    .pullRightLeft a.active:before
+    {
+        left: 0px;
+    } 
+    
+    .pullRightLeft a.active:after
+    {
+        right: 0px;
+    }
+    
+    .pullRightLeft a.active:hover:before, 
+    .pullRightLeft a.active:hover:after
+    {
+        width: 100%;
+        opacity: 0.3;
+        background: white;
+    }
+    
+    nav a.active 
+    {
+    color: white;
+    background: #2B325E;
+    }
+
+    
+/*threesteps*/
+    .threesteps 
+    {
+        display: flex;
+        flex-flow: row wrap;
+        padding-top: 0px;
+    }
+    
+    .threesteps .container 
+    {
+        width: 50%;
+        height: 400px;
+    }
+    
+    .threesteps .vl-slider 
+    {
+        display: flex;
+        flex-flow: row nowrap;
+        border-right: .5px solid #2B325E;
+    }
+    
+    .threesteps .controller
+    {
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+        align-self: center;
+        color: #2B325E;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+    
+    .vl-slider img 
+    {
+        height: 100%;
+        padding: 0px 10px;
+    }
+    
+    .threesteps .slides
+    {
+        margin: 0px auto;
+    }
+    
+    .threesteps .list
+    {
+        font-size: 29px;
+        border-left: .5px solid #2B325E;
+    }
+    
+    .threesteps .list div
+    {
+        margin-bottom: 10px;
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+        transition: all 100ms;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+    
+    .threesteps div p
+    {
+        width: calc(100% - 50px);
+        font-size: 25px;
+        font-family: 'Droid Serif';
+        /*float: right;*/
+    }
+    
+    .threesteps a
+    {
+        font-family: 'Droid Serif';
+    }
+    
+    .threesteps .list span
+    {
+        width: 50px;
+        height: 29px;
+        display: block;
+        float: left;
+    }
+    
+    .threesteps .list span i
+    {
+        color: #2B325E;
+        overflow: hidden;
+        width: 0%;
+        height: 100%;
+    }
+    
+    .threesteps div.active
+    {
+        color: #2B325E;
+        border-bottom: 2px solid #2B325E;
+        border-top: 2px solid #2B325E;
+    }
+    
+    .threesteps div.active i
+    {
+        width: 100%;
+        transition: all 300ms;
+    }
+
+/*sectioner*/
+    .vl-sectioner
+    {
+        display: flex;
+    }
+    
+    /*Video*/
+        .vl-video
+        {
+            padding-top: 0px;
+            width: 75%;
+            float: left;
+        }
+        
+        .vl-video-contain
+        {
+            margin: 0px auto;
+            width: 560px;
+            height: 315px;
+        }
+        
+    /*aside*/
+        .vl-aside
+        {
+            width: calc(25% - 5px);
+            padding-top: 0;
+            /*height: 500px;*/
+            background: #2b325e;
+            float: right;
+            margin-left: 5px;
+            color: white;
+        }
+        
+        .vl-aside hr
+        {
+            color: white;
+        }
+        
+        .vl-aside p
+        {
+            padding-top: 10px;
+            font-family: 'Droid Serif';
+        }
+        
+/*vl-cta*/
+    .vl-cta
+    {
+        background: url('images/background-berries.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+        color: #2b325e;
+        padding: 40px;
+        /*display: flex;*/
+        /*flex-flow: row nowrap;*/
+    }
+    
+    .vl-cta .vl-wrapper
+    {
+        display: flex;
+        align-items: stretch;
+        background: hsla(0, 0%, 100%, .7);
+        padding: 10px;
+    }
+    
+    .vl-cta .cta-wrap
+    {
+        font-size: 30px;
+        font-weight: 500;
+        width: 65%;
+        float: left;
+        /*display: flex;*/
+        /*flex-flow: row wrap;*/
+        /*align-items: center;*/
+        /*align-self: stretch;*/
+    }
+    
+    .vl-cta h4:nth-of-type(1)
+    {
+        font-weight: 600;
+    }
+    
+    .vl-cta h4:nth-of-type(2)
+    {
+        font-size: 25px;
+    }
+    
+    .vl-cta div:nth-of-type(2)
+    {
+        width: 35%;
+        float: right;
+        display: flex;
+        align-items: center;
+    }
+    
+    .vl-cta .vl-btn
+    {
+        display: block;
+        color: #559960;
+        font-size: 25px;
+        padding: 10px;
+        border: 3px solid #559960;
+        border-radius: 5px;
+        margin: 0 auto;
+        font-family: 'Montserrat';
+        transition: all 300ms;
+    }
+    
+    .vl-cta .vl-btn:hover
+    {
+        padding: 15px;
+        font-size: 27px
+    }
+    
+/*vl-features*/
+    .vl-features hr
+    {
+        color: #2B325E;
+    }
+    
+/*Footer Starts*/
+    footer
+    {
+        text-align: center;
+        color: white;
+        background-color: #2b325e;
+        margin-top: 5px;
+        padding: 20px;
+        font-family: 'Montserrat';
+    }
+    
+    footer li a 
+    {
+        color: white;
+        font-family: 'Playlist-Script';
+    }
+    
+    footer .vl-botnav li a
+    {
+        font-size: 22px;
+    }
+    
+    footer ul 
+    {
+        margin: 1.5% auto;
+        padding: 0;
+    }
+    
+    footer ul:first-child i 
+    {
+        width: 30px;
+        height: 30px;
+        border: 1px solid white;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 30px;
+    }
+    
+    footer li 
+    {
+        display: inline-table;
+        margin: 0 10px;
+    }
+    
+    footer li a:hover,
+    footer li a i:hover
+    {
+        color: #559960;
+        border-color: #559960;
+        transition: all 300ms;
+        text-decoration: none;
+    }
+    
+    footer ul:first-child i
+    {
+     color:white;
+    }
+    
+    footer p
+    {
+        font-family: 'Droid Serif';
+    }
